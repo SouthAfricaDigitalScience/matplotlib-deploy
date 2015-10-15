@@ -13,7 +13,7 @@ SOURCE_FILE="$NAME-$VERSION.tar.gz"
 module load ci
 echo "Modules available"
 module avail
-
+module add gcc/4.9.2
 module load python/2.7.9
 module load numpy/1.9.1
 module load libpng/1.6.18-gcc-1.6.18
