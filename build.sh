@@ -19,9 +19,8 @@ echo "After python, PYTHONPATH is $PYTHONPATH"
 module load numpy/1.9.1
 echo "After numpy, PYTHONPATH is $PYTHONPATH"
 module load libpng/1.6.18-gcc-1.6.18
-
-
-
+echo "Adding Freetype module"
+module load freetype/2.6.1
 
 cat <<PYTHON>python_test.py
 import numpy
