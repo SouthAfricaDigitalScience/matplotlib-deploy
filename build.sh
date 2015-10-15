@@ -17,7 +17,6 @@ module add gcc/4.8.4
 module load python/2.7.9
 module load numpy/1.9.1
 module load libpng/1.6.18-gcc-4.8.4
-module load hdf5/1.8.12
 
 
 echo "REPO_DIR is "
