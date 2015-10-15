@@ -65,6 +65,10 @@ cd $WORKSPACE/$NAME-$VERSION
 echo "updating PYTHONPATH"
 export PYTHONPATH=${PYTHONPATH}:${SOFT_DIR}/lib/python2.7/site-packages/
 
+echo "PATH and LD_LIBRARY_PATH"
+echo $PATH
+echo $LD_LIBRARY_PATH
+
 echo "freetype-config command"
 which freetype-config
 locate freetype-config
