@@ -3,9 +3,9 @@
 . /usr/share/modules/init/bash
 module load ci
 module load python/2.7.9
-module load numpy
-module load libpng/1.6.18-gcc-4.8.2
-module load freetype
+module load numpy/1.9.1
+module load libpng/1.6.18-gcc-1.6.18
+module load hdf5/1.8.12
 
 echo "Running python check"
 cd $WORKSPACE/$NAME-$VERSION
@@ -18,7 +18,7 @@ fi
 
 
 echo "Running python install"
-python setup.py install
+python setup.py install --prefix=$SOFT_DIR
 
 mkdir -p modules
 (
@@ -30,7 +30,6 @@ proc ModulesHelp { } {
    puts stderr "\tAdds $NAME $VERSION to your environment"
 }
 
-module load gcc/$GCC_VERSION
 
 module-whatis   "$NAME $VERSION."
 setenv       MATPLOTLIB_VERSION       $VERSION
