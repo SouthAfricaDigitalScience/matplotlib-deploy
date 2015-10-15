@@ -20,7 +20,7 @@ fi
 
 echo "Running python install"
 echo "updating PYTHONPATH"
-export PYTHONPATH=$PYTHONPATH:$SOFT_DIR
+export PYTHONPATH=${PYTHONPATH}:${SOFT_DIR}/lib/python2.7/site-packages/
 python setup.py install --prefix=$SOFT_DIR
 
 mkdir -p modules
