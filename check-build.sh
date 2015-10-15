@@ -5,6 +5,7 @@ module load ci
 module load python/2.7.9
 module load numpy/1.9.1
 module load libpng/1.6.18-gcc-1.6.18
+module load freetype/2.6.1
 module load mpc/1.0.1
 
 
@@ -21,6 +22,7 @@ fi
 echo "Running python install"
 echo "updating PYTHONPATH"
 export PYTHONPATH=${PYTHONPATH}:${SOFT_DIR}/lib/python2.7/site-packages/
+echo $PYTHONPATH
 python setup.py install --prefix=$SOFT_DIR
 
 mkdir -p modules
