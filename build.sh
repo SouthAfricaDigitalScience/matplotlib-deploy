@@ -1,6 +1,6 @@
 #!/bin/bash -e
 #SOURCE_FILE=$NAME-$VERSION.tar.gz
-. /usr/share/modules/init/bash 
+. /usr/share/modules/init/bash
 # We will build the code from the github repo, but if we want specific versions,
 # a new Jenkins job will be created for the version number and we'll provide
 # the URL to the tarball in the configuration.
@@ -23,7 +23,7 @@ module load mpc/1.0.1
 cat <<PYTHON>python_test.py
 import numpy
 print("Printing Numpy Version")
-print(numpy.version.numpy)
+print numpy.__version__
 PYTHON
 
 python python_test.py
