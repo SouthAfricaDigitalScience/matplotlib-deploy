@@ -11,9 +11,12 @@ VERSION="1.4.3"
 SOURCE_FILE="$NAME-$VERSION.tar.gz"
 
 module load ci
+echo "Modules available"
+module avail
+
 module load python/2.7.9
 module load numpy
-module load libpng/1.6.18-gcc-4.8.2
+#module load libpng/1.6.18-gcc-4.8.2
 module load freetype
 
 
