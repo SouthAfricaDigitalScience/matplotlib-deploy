@@ -19,6 +19,8 @@ fi
 
 
 echo "Running python install"
+echo "updating PYTHONPATH"
+export PYTHONPATH=$PYTHONPATH:$SOFT_DIR
 python setup.py install --prefix=$SOFT_DIR
 
 mkdir -p modules
@@ -36,7 +38,7 @@ module-whatis   "$NAME $VERSION."
 setenv       MATPLOTLIB_VERSION       $VERSION
 setenv       MATPLOTLIB_DIR           /apprepo/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION
 
-prepend-path 	PATH            $::env(MATPLOTLIB_DIR)/bin
+prepend-path 	  PATH            $::env(MATPLOTLIB_DIR)/bin
 prepend-path    PATH            $::env(MATPLOTLIB_DIR)/include
 prepend-path    PATH            $::env(MATPLOTLIB_DIR)/bin
 prepend-path    MANPATH         $::env(MATPLOTLIB_DIR)/man
@@ -49,4 +51,3 @@ cp modules/$VERSION $LIBRARIES_MODULES/$NAME/$VERSION
 # Testing module
 module avail
 module list
-
