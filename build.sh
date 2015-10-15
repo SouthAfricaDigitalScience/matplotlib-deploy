@@ -6,28 +6,26 @@
 # the URL to the tarball in the configuration.
 SOURCE_REPO="https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.4.3/"
 # We pretend that the $SOURCE_FILE is there, even though it's actually a dir.
-NAME="matplotlib"
-VERSION="1.4.3"
-SOURCE_FILE="$NAME-$VERSION.tar.gz"
-
+SOURCE_FILE="${NAME}-${VERSION}.tar.gz"
 module load ci
 echo "Modules available"
 module avail
-module add gcc/4.8.4
-module load python/2.7.9
+module add gcc/${GCC_VERSION}
+module load python/${PYTHON_VERSION}
 echo "After python, PYTHONPATH is $PYTHONPATH"
 module load numpy/1.9.1
 echo "After numpy, PYTHONPATH is $PYTHONPATH"
 module load libpng/1.6.18-gcc-1.6.18
 
-
-
+echo "Creating a quick test script"
 
 cat <<PYTHON>python_test.py
 import numpy
 print("Printing Numpy Version")
 print numpy.__version__
 PYTHON
+
+echo "Checking to see if we can use numpy"
 
 python python_test.py
 
