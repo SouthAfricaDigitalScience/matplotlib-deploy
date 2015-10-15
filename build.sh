@@ -54,8 +54,8 @@ else
   echo "continuing from previous builds, using source at " $SRC_DIR/$SOURCE_FILE
 fi
 
-tar -xvzf  --keep-newer-files $SRC_DIR/$SOURCE_FILE -C $WORKSPACE
+tar -xvz  --keep-newer-files -f $SRC_DIR/$SOURCE_FILE -C $WORKSPACE
 cd $WORKSPACE/$NAME-$VERSION
 
 echo "Configuring the build"
-python setup.py build 
+python setup.py build
