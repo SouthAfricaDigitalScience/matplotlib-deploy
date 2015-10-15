@@ -24,6 +24,7 @@ cat <<PYTHON>python_test.py
 import numpy
 print("Printing Numpy Version")
 print(numpy.version.numpy)
+numpy.test()
 PYTHON
 
 python python_test.py
