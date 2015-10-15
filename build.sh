@@ -62,5 +62,15 @@ fi
 tar -xvz  --keep-newer-files -f $SRC_DIR/$SOURCE_FILE -C $WORKSPACE
 cd $WORKSPACE/$NAME-$VERSION
 
+echo "updating PYTHONPATH"
+export PYTHONPATH=${PYTHONPATH}:${SOFT_DIR}/lib/python2.7/site-packages/
+
+echo "freetype-config command"
+which freetype-config
+locate freetype-config
+
+echo "Locate the header file"
+locate ft2build.h
+
 echo "Configuring the build"
 python setup.py build
