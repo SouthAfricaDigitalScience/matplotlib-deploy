@@ -38,6 +38,7 @@ module-whatis   "$NAME $VERSION."
 setenv       MATPLOTLIB_VERSION       $VERSION
 setenv       MATPLOTLIB_DIR           /apprepo/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION
 
+prepend-path    PYTHONPATH      /apprepo/$::env(SITE)/$::env(OS)/$::env(ARCH)/${NAME}/${VERSION}/lib/python2.7/site-packages/
 prepend-path 	  PATH            $::env(MATPLOTLIB_DIR)/bin
 prepend-path    PATH            $::env(MATPLOTLIB_DIR)/include
 prepend-path    PATH            $::env(MATPLOTLIB_DIR)/bin
