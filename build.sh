@@ -19,16 +19,6 @@ module load numpy/1.9.1
 module load libpng/1.6.18-gcc-1.6.18
 module load mpc/1.0.1
 
-
-cat <<PYTHON>python_test.py
-import numpy
-print("Printing Numpy Version")
-print(numpy.version.numpy)
-numpy.test()
-PYTHON
-
-python python_test.py
-
 echo "REPO_DIR is "
 echo $REPO_DIR
 echo "SRC_DIR is "
