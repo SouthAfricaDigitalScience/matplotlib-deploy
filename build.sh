@@ -22,6 +22,13 @@ module load libpng/1.6.18-gcc-1.6.18
 echo "Adding Freetype module"
 module load freetype/2.6.1
 
+echo "freetype-config command"
+which freetype-config
+locate freetype-config
+
+echo "Locate the header file"
+locate ft2build.h
+
 cat <<PYTHON>python_test.py
 import numpy
 print("Printing Numpy Version")
