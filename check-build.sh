@@ -5,6 +5,7 @@ module load ci
 module load python/2.7.9
 module load numpy/1.9.1
 module load libpng/1.6.18-gcc-1.6.18
+module load mpc/1.0.1
 
 
 echo "Running python check"
