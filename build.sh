@@ -18,6 +18,8 @@ echo "After numpy, PYTHONPATH is $PYTHONPATH"
 module load libpng/1.6.18-gcc-1.6.18
 echo "Adding Freetype module"
 module load freetype/2.6.1
+echo "show module files"
+module show freetype/2.6.1
 
 echo "freetype-config command"
 which freetype-config
